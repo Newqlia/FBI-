@@ -1,0 +1,1786 @@
+/* =========================================
+   FBI BITES
+   GLOBAL STYLES
+========================================= */
+
+:root {
+
+    --red: #ee1b24;
+    --red-dark: #c9141b;
+
+    --yellow: #fde50b;
+    --yellow-light: #fff36a;
+
+    --black: #171717;
+    --dark: #211f20;
+
+    --white: #ffffff;
+    --cream: #fffdf5;
+
+    --blue: #1295cf;
+
+    --gray: #777777;
+    --light-gray: #f4f4f4;
+    --border: #e8e8e8;
+
+    --radius-small: 10px;
+    --radius-medium: 20px;
+    --radius-large: 32px;
+
+    --shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+
+}
+
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: var(--white);
+    color: var(--black);
+    line-height: 1.6;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font-family: inherit;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* =========================================
+   REUSABLE CONTAINER
+========================================= */
+
+.section-container,
+.nav-container,
+.hero-container,
+.signature-container {
+
+    width: min(1200px, 92%);
+    margin: 0 auto;
+
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid var(--border);
+
+}
+
+.nav-container {
+
+    min-height: 82px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+}
+
+.logo {
+
+    width: 145px;
+    flex-shrink: 0;
+
+}
+
+.logo img {
+
+    max-height: 62px;
+    object-fit: contain;
+
+}
+
+.nav-links {
+
+    display: flex;
+    align-items: center;
+    gap: 35px;
+
+}
+
+.nav-links a {
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.25s ease;
+
+}
+
+.nav-links a:hover {
+
+    color: var(--red);
+
+}
+
+.nav-actions {
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+}
+
+.cart-button {
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 11px 16px;
+
+    background: var(--black);
+    color: white;
+
+    border-radius: 50px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+}
+
+.cart-button small {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 21px;
+    height: 21px;
+
+    background: var(--yellow);
+    color: var(--black);
+
+    border-radius: 50%;
+
+    font-size: 11px;
+
+}
+
+.menu-toggle {
+
+    display: none;
+
+    background: var(--red);
+    color: white;
+
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+
+    font-size: 20px;
+
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(253, 229, 11, 0.18),
+            transparent 30%
+        );
+
+    padding: 80px 0 100px;
+
+    overflow: hidden;
+
+}
+
+.hero-container {
+
+    display: grid;
+
+    grid-template-columns: 1fr 0.9fr;
+
+    align-items: center;
+
+    gap: 70px;
+
+}
+
+.hero-content {
+
+    position: relative;
+    z-index: 2;
+
+}
+
+.hero-tag {
+
+    display: inline-block;
+
+    padding: 8px 15px;
+
+    background: var(--yellow);
+
+    border-radius: 50px;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    margin-bottom: 25px;
+
+}
+
+.hero h1 {
+
+    font-family: "Baloo 2", sans-serif;
+
+    font-size: clamp(60px, 7vw, 105px);
+
+    line-height: 0.83;
+
+    letter-spacing: -5px;
+
+    font-weight: 800;
+
+    margin-bottom: 30px;
+
+}
+
+.hero h1 span {
+
+    color: var(--red);
+
+}
+
+.hero-content > p {
+
+    max-width: 500px;
+
+    color: var(--gray);
+
+    font-size: 16px;
+
+    margin-bottom: 35px;
+
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.hero-buttons {
+
+    display: flex;
+    gap: 12px;
+
+    margin-bottom: 55px;
+
+}
+
+.btn {
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 15px 25px;
+
+    border-radius: 50px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    transition: 0.25s ease;
+
+}
+
+.btn-primary {
+
+    background: var(--red);
+    color: white;
+
+    box-shadow: 0 10px 25px rgba(238, 27, 36, 0.25);
+
+}
+
+.btn-primary:hover {
+
+    background: var(--red-dark);
+
+    transform: translateY(-3px);
+
+}
+
+.btn-secondary {
+
+    border: 2px solid var(--black);
+
+}
+
+.btn-secondary:hover {
+
+    background: var(--black);
+    color: white;
+
+}
+
+.btn-dark {
+
+    background: var(--black);
+    color: white;
+
+}
+
+.btn-dark:hover {
+
+    background: var(--red);
+
+}
+
+.btn-yellow {
+
+    background: var(--yellow);
+    color: var(--black);
+
+}
+
+.btn-yellow:hover {
+
+    transform: translateY(-3px);
+
+}
+
+
+/* =========================================
+   HERO STATS
+========================================= */
+
+.hero-stats {
+
+    display: flex;
+    gap: 35px;
+
+}
+
+.stat {
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.stat strong {
+
+    font-family: "Baloo 2", sans-serif;
+
+    font-size: 25px;
+
+    color: var(--red);
+
+}
+
+.stat span {
+
+    color: var(--gray);
+
+    font-size: 10px;
+
+    line-height: 1.3;
+
+    text-transform: uppercase;
+
+    font-weight: 600;
+
+}
+
+
+/* =========================================
+   HERO FOOD
+========================================= */
+
+.hero-food {
+
+    position: relative;
+
+    min-height: 560px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+}
+
+.hero-circle {
+
+    position: absolute;
+
+    width: 470px;
+    height: 470px;
+
+    background: var(--yellow);
+
+    border-radius: 50%;
+
+    transform: rotate(-8deg);
+
+}
+
+.food-card-main {
+
+    position: relative;
+    z-index: 2;
+
+    width: 390px;
+
+    background: white;
+
+    padding: 15px;
+
+    border-radius: var(--radius-large);
+
+    box-shadow: var(--shadow);
+
+    transform: rotate(3deg);
+
+}
+
+.food-badge {
+
+    position: absolute;
+
+    top: 25px;
+    left: 25px;
+
+    z-index: 3;
+
+    background: var(--red);
+    color: white;
+
+    padding: 8px 12px;
+
+    border-radius: 50px;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+}
+
+.food-image {
+
+    height: 300px;
+
+    overflow: hidden;
+
+    border-radius: 22px;
+
+    background: var(--light-gray);
+
+}
+
+.food-image img {
+
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+.food-card-info {
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 5px 10px;
+
+}
+
+.food-card-info span {
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    color: var(--red);
+
+}
+
+.food-card-info h2 {
+
+    font-family: "Baloo 2", sans-serif;
+
+    font-size: 27px;
+
+    line-height: 1;
+
+}
+
+.food-price {
+
+    text-align: right;
+
+}
+
+.food-price small {
+
+    display: block;
+
+    font-size: 8px;
+
+}
+
+.food-price strong {
+
+    font-size: 18px;
+
+}
+
+.quick-add {
+
+    width: 100%;
+
+    padding: 13px;
+
+    background: var(--black);
+    color: white;
+
+    border-radius: 12px;
+
+    font-weight: 700;
+
+}
+
+.floating-note {
+
+    position: absolute;
+
+    z-index: 4;
+
+    bottom: 50px;
+    right: -20px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    background: white;
+
+    padding: 12px 18px;
+
+    border-radius: 50px;
+
+    box-shadow: var(--shadow);
+
+}
+
+.floating-note > span {
+
+    font-size: 25px;
+
+}
+
+.floating-note strong,
+.floating-note small {
+
+    display: block;
+
+}
+
+.floating-note strong {
+
+    font-size: 12px;
+
+}
+
+.floating-note small {
+
+    color: var(--gray);
+
+    font-size: 9px;
+
+}
+
+
+/* =========================================
+   SECTION HEADINGS
+========================================= */
+
+.section-heading > span,
+.eyebrow {
+
+    display: block;
+
+    color: var(--red);
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+
+}
+
+.section-heading h2 {
+
+    font-family: "Baloo 2", sans-serif;
+
+    font-size: clamp(40px, 5vw, 65px);
+
+    line-height: 0.9;
+
+}
+
+.section-heading h2 em {
+
+    color: var(--red);
+
+    font-style: normal;
+
+}
+
+
+/* =========================================
+   CATEGORIES
+========================================= */
+
+.categories {
+
+    padding: 80px 0;
+
+    background: var(--cream);
+
+}
+
+.small-heading {
+
+    margin-bottom: 35px;
+
+}
+
+.category-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 15px;
+
+}
+
+.category-card {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 18px;
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 18px;
+
+    transition: 0.25s ease;
+
+}
+
+.category-card:hover,
+.category-card.active {
+
+    background: var(--red);
+    color: white;
+
+    transform: translateY(-5px);
+
+}
+
+.category-icon {
+
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--yellow);
+
+    border-radius: 14px;
+
+    font-size: 23px;
+
+    flex-shrink: 0;
+
+}
+
+.category-card h3 {
+
+    font-size: 13px;
+
+}
+
+.category-card p {
+
+    font-size: 9px;
+
+    color: var(--gray);
+
+}
+
+.category-card:hover p,
+.category-card.active p {
+
+    color: rgba(255, 255, 255, 0.75);
+
+}
+
+.category-arrow {
+
+    margin-left: auto;
+
+    font-size: 20px;
+
+}
+
+
+/* =========================================
+   MENU
+========================================= */
+
+.menu-section {
+
+    padding: 110px 0;
+
+}
+
+.menu-header {
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: end;
+
+    margin-bottom: 55px;
+
+}
+
+.menu-header > p {
+
+    max-width: 370px;
+
+    color: var(--gray);
+
+    font-size: 14px;
+
+}
+
+.menu-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+
+}
+
+.product-card {
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 24px;
+
+    overflow: hidden;
+
+    transition: 0.3s ease;
+
+}
+
+.product-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow: var(--shadow);
+
+}
+
+.product-image {
+
+    height: 250px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: var(--light-gray);
+
+}
+
+.product-image img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 0.5s ease;
+
+}
+
+.product-card:hover .product-image img {
+
+    transform: scale(1.06);
+
+}
+
+.product-label {
+
+    position: absolute;
+
+    top: 15px;
+    left: 15px;
+
+    z-index: 2;
+
+    background: var(--yellow);
+
+    padding: 6px 10px;
+
+    border-radius: 30px;
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+}
+
+.favorite {
+
+    position: absolute;
+
+    top: 15px;
+    right: 15px;
+
+    width: 35px;
+    height: 35px;
+
+    background: white;
+
+    border-radius: 50%;
+
+    font-size: 19px;
+
+}
+
+.product-info {
+
+    padding: 20px;
+
+}
+
+.product-category {
+
+    color: var(--red);
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+}
+
+.product-info h3 {
+
+    font-family: "Baloo 2", sans-serif;
+
+    font-size: 27px;
+
+    line-height: 1;
+
+    margin: 5px 0 8px;
+
+}
+
+.product-info p {
+
+    color: var(--gray);
+
+    font-size: 11px;
+
+    min-height: 45px;
+
+}
+
+.product-bottom {
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 15px;
+
+}
+
+.price {
+
+    font-size: 15px;
+
+}
+
+.add-button {
+
+    width: 38px;
+    height: 38px;
+
+    background: var(--red);
+    color: white;
+
+    border-radius: 50%;
+
+    font-size: 23px;
+
+    transition: 0.2s ease;
+
+}
+
+.add-button:hover {
+
+    background: var(--yellow);
+    color: var(--black);
+
+}
+
+.menu-button-wrapper {
+
+    text-align: center;
+
+    margin-top: 45px;
+
+}
+
+
+/* =========================================
+   SIGNATURE SECTION
+========================================= */
+
+.signature-section {
+
+    background: var(--red);
+
+    color: white;
+
+    padding: 100px 0;
+
+    overflow: hidden;
+
+}
+
+.signature-container {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 80px;
+
+}
+
+.signature-image {
+
+    position: relative;
+
+}
+
+.signature-image img {
+
+    position: relative;
+
+    z-index: 2;
+
+    height: 500px;
+
+    object-fit: cover;
+
+    border-radius: 35px;
+
+    transform: rotate(-4deg);
+
+}
+
+.signature-pattern {
+
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    top: 25px;
+    left: 25px;
+
+    border: 4px solid var(--yellow);
+
+    border-radius: 35px;
+
+}
+
+.signature-content .eyebrow {
+
+    color: var(--yellow);
+
+}
+
+.signature-content h2 {
+
+    font-family: "Baloo 2", sans-serif;
+
+    font-size: clamp(50px, 6vw, 80px);
+
+    line-height: 0.85;
+
+    margin-bottom: 30px;
+
+}
+
+.signature-content h2 span {
+
+    color: var(--yellow);
+
+}
+
+.signature-content > p {
+
+    max-width: 500px;
+
+    color: rgba(255,255,255,0.8);
+
+    font-size: 15px;
+
+    margin-bottom: 30px;
+
+}
+
+.signature-points {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+
+    margin-bottom: 35px;
+
+}
+
+.signature-points div {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+}
+
+.signature-points strong {
+
+    color: var(--yellow);
+
+    font-family: "Baloo 2", sans-serif;
+
+    font-size: 20px;
+
+}
+
+.signature-points span {
+
+    font-size: 12px;
+
+}
+
+.text-link {
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    border-bottom: 2px solid currentColor;
+
+    padding-bottom: 4px;
+
+}
+
+
+/* =========================================
+   ABOUT
+========================================= */
+
+.about-section {
+
+    padding: 110px 0;
+
+    background: var(--cream);
+
+}
+
+.about-container {
+
+    display: grid;
+
+    grid-template-columns: 1fr 0.8fr;
+
+    gap: 100px;
+
+    align-items: center;
+
+}
+
+.about-content h2 {
+
+    font-family: "Baloo 2", sans-serif;
+
+    font-size: clamp(50px, 6vw, 75px);
+
+    line-height: 0.85;
+
+    margin-bottom: 30px;
+
+}
+
+.about-content h2 span {
+
+    color: var(--red);
+
+}
+
+.about-content p {
+
+    max-width: 560px;
+
+    color: var(--gray);
+
+    font-size: 14px;
+
+    margin-bottom: 15px;
+
+}
+
+.about-content .text-link {
+
+    display: inline-block;
+
+    margin-top: 15px;
+
+}
+
+.about-card {
+
+    background: var(--black);
+
+    color: white;
+
+    min-height: 480px;
+
+    border-radius: 30px;
+
+    padding: 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    transform: rotate(3deg);
+
+    box-shadow: var(--shadow);
+
+}
+
+.about-card-top,
+.about-card-bottom {
+
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    font-weight: 700;
+
+}
+
+.about-card-middle {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+.about-card-middle strong {
+
+    font-family: "Baloo 2", sans-serif;
+
+    font-size: clamp(55px, 7vw, 85px);
+
+    line-height: 0.75;
+
+}
+
+.about-card-middle strong:nth-child(2) {
+
+    color: var(--yellow);
+
+}
+
+.about-card-middle strong:nth-child(3) {
+
+    color: var(--red);
+
+}
+
+
+/* =========================================
+   CTA
+========================================= */
+
+.order-cta {
+
+    background: var(--yellow);
+
+    padding: 100px 20px;
+
+    text-align: center;
+
+}
+
+.cta-content > span {
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+}
+
+.cta-content h2 {
+
+    font-family: "Baloo 2", sans-serif;
+
+    font-size: clamp(55px, 8vw, 100px);
+
+    line-height: 0.8;
+
+    margin: 20px 0 35px;
+
+}
+
+.cta-content h2 em {
+
+    color: var(--red);
+
+    font-style: normal;
+
+}
+
+.cta-content .btn {
+
+    background: var(--black);
+    color: white;
+
+}
+
+
+/* =========================================
+   CONTACT
+========================================= */
+
+.contact-section {
+
+    padding: 100px 0;
+
+}
+
+.contact-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+
+}
+
+.contact-grid h2 {
+
+    font-family: "Baloo 2", sans-serif;
+
+    font-size: clamp(50px, 6vw, 75px);
+
+    line-height: 0.85;
+
+}
+
+.contact-grid h2 span {
+
+    color: var(--red);
+
+}
+
+.contact-details {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 25px;
+
+}
+
+.contact-details div {
+
+    border-bottom: 1px solid var(--border);
+
+    padding-bottom: 20px;
+
+}
+
+.contact-details span {
+
+    display: block;
+
+    color: var(--red);
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 5px;
+
+}
+
+.contact-details strong {
+
+    font-size: 14px;
+
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+
+    background: var(--black);
+
+    color: white;
+
+    padding: 55px 0;
+
+}
+
+.footer-container {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+
+    align-items: center;
+
+    gap: 30px;
+
+}
+
+.footer-brand img {
+
+    width: 120px;
+
+    background: white;
+
+    border-radius: 8px;
+
+    padding: 5px;
+
+}
+
+.footer-brand p {
+
+    margin-top: 8px;
+
+    color: var(--yellow);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+}
+
+.footer-links {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+}
+
+.footer-links a {
+
+    font-size: 11px;
+
+}
+
+.footer-links a:hover {
+
+    color: var(--yellow);
+
+}
+
+.footer-copy {
+
+    text-align: right;
+
+}
+
+.footer-copy p {
+
+    color: #777;
+
+    font-size: 9px;
+
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .hero-container {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .hero-content {
+
+        text-align: center;
+
+    }
+
+    .hero-content > p {
+
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+    .hero-buttons,
+    .hero-stats {
+
+        justify-content: center;
+
+    }
+
+    .hero-food {
+
+        min-height: 500px;
+
+    }
+
+    .category-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .menu-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .signature-container,
+    .about-container {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .about-container {
+
+        gap: 60px;
+
+    }
+
+    .contact-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .nav-container {
+
+        min-height: 70px;
+
+    }
+
+    .nav-links {
+
+        display: none;
+
+    }
+
+    .menu-toggle {
+
+        display: block;
+
+    }
+
+    .cart-button span {
+
+        display: none;
+
+    }
+
+    .logo {
+
+        width: 120px;
+
+    }
+
+    .hero {
+
+        padding: 55px 0 70px;
+
+    }
+
+    .hero h1 {
+
+        font-size: 62px;
+
+        letter-spacing: -3px;
+
+    }
+
+    .hero-stats {
+
+        gap: 18px;
+
+    }
+
+    .hero-food {
+
+        min-height: 430px;
+
+    }
+
+    .hero-circle {
+
+        width: 330px;
+        height: 330px;
+
+    }
+
+    .food-card-main {
+
+        width: min(340px, 90%);
+
+    }
+
+    .food-image {
+
+        height: 250px;
+
+    }
+
+    .floating-note {
+
+        right: 0;
+
+    }
+
+    .category-grid,
+    .menu-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .menu-header {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 25px;
+
+    }
+
+    .signature-image img {
+
+        height: 380px;
+
+    }
+
+    .signature-container {
+
+        gap: 55px;
+
+    }
+
+    .about-card {
+
+        min-height: 400px;
+
+    }
+
+    .footer-container {
+
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+    }
+
+    .footer-brand img {
+
+        margin: auto;
+
+    }
+
+    .footer-links {
+
+        flex-wrap: wrap;
+
+    }
+
+    .footer-copy {
+
+        text-align: center;
+
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    .hero h1 {
+
+        font-size: 52px;
+
+    }
+
+    .hero-buttons {
+
+        flex-direction: column;
+
+    }
+
+    .btn {
+
+        width: 100%;
+
+    }
+
+    .hero-stats {
+
+        flex-wrap: wrap;
+
+    }
+
+    .hero-food {
+
+        min-height: 390px;
+
+    }
+
+    .hero-circle {
+
+        width: 290px;
+        height: 290px;
+
+    }
+
+    .food-card-main {
+
+        width: 300px;
+
+    }
+
+    .food-image {
+
+        height: 220px;
+
+    }
+
+}
