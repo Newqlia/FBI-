@@ -1,773 +1,376 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
-        name="description"
-        content="FBI Bites - Freeze Your Cravings. Fast food, bold flavor and the famous Ndakava Dog."
-    >
-
+      name="description"
+      content="FBI Bites is a Kenyan fast-food brand serving quick bites, fries, snacks and affordable meals for students, workers and families."
+    />
     <title>FBI Bites | Freeze Your Cravings</title>
 
-    <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet"
-    >
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
-    <!-- Our CSS -->
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
-
-    <!-- =========================
-         NAVIGATION
-    ========================== -->
-
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="navbar">
+      <div class="nav-container">
+        <a href="#home" class="logo" aria-label="FBI Bites home">
+          <img src="images/Fbi logo.jpg" alt="FBI Bites logo" />
+          <span class="logo-drips" aria-hidden="true"></span>
+        </a>
 
-        <div class="nav-container">
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="#home" data-page-link="home">Home</a>
+          <a href="#menu" data-page-link="menu">Menu</a>
+          <a href="#about" data-page-link="about">About</a>
+          <a href="#how-it-works" data-page-link="how-it-works">How It Works</a>
+          <a href="#contact" data-page-link="contact">Contact</a>
+          <a href="#cart" data-open-cart>Cart</a>
+        </nav>
 
-            <a href="#" class="logo">
-                <img src="images/Fbi logo.jpg" alt="FBI Bites Logo">
-            </a>
+        <div class="nav-actions">
+          <button class="cart-button" type="button" aria-label="View cart">
+            <span>🛒</span>
+            <span>Cart</span>
+            <small>0</small>
+          </button>
 
-            <nav class="nav-links">
-                <a href="#home">Home</a>
-                <a href="#menu">Menu</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
-            </nav>
-
-            <div class="nav-actions">
-
-                <button class="cart-button">
-                    🛒
-                    <span>Cart</span>
-                    <small>0</small>
-                </button>
-
-                <button class="menu-toggle">
-                    ☰
-                </button>
-
-            </div>
-
+          <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
         </div>
-
+      </div>
     </header>
 
+    <main id="main-content" tabindex="-1">
+      <div class="page-view is-active" data-page="home" id="homePage">
+      <section class="hero" id="home">
+        <div class="hero-container">
+          <div class="hero-content">
+            <span class="hero-tag">🔥 Fast bites. Big cravings.</span>
+            <h1>FREEZE <span>YOUR CRAVINGS.</span></h1>
+            <p>
+              Affordable, tasty Kenyan fast food for students, workers and families who want proper food, quick.
+            </p>
 
-    <!-- =========================
-         HERO SECTION
-    ========================== -->
-
-    <main>
-
-        <section class="hero" id="home">
-
-            <div class="hero-container">
-
-                <div class="hero-content">
-
-                    <span class="hero-tag">
-                        🔥 Fresh. Fast. Fearlessly Tasty.
-                    </span>
-
-                    <h1>
-                        FREEZE<br>
-                        YOUR <span>CRAVINGS.</span>
-                    </h1>
-
-                    <p>
-                        Big bites. Bold flavors. Made for the moments
-                        when ordinary food simply won't do.
-                    </p>
-
-                    <div class="hero-buttons">
-
-                        <a href="#menu" class="btn btn-primary">
-                            Order Now
-                        </a>
-
-                        <a href="#menu" class="btn btn-secondary">
-                            Explore Menu
-                        </a>
-
-                    </div>
-
-                    <div class="hero-stats">
-
-                        <div class="stat">
-                            <strong>01</strong>
-                            <span>Signature<br>Ndakava Dog</span>
-                        </div>
-
-                        <div class="stat">
-                            <strong>∞</strong>
-                            <span>Cravings<br>Welcome</span>
-                        </div>
-
-                        <div class="stat">
-                            <strong>FBI</strong>
-                            <span>Freeze Your<br>Cravings</span>
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <div class="hero-food">
-
-                    <div class="hero-circle"></div>
-
-                    <div class="food-card-main">
-
-                        <span class="food-badge">
-                            OUR SIGNATURE
-                        </span>
-
-                        <div class="food-image">
-
-                            <img
-                                src="images/Ndakava dog.jpg"
-                                alt="Ndakava Dog"
-                            >
-
-                        </div>
-
-                        <div class="food-card-info">
-
-                            <div>
-                                <span>FBI SPECIAL</span>
-
-                                <h2>Ndakava Dog</h2>
-                            </div>
-
-                            <div class="food-price">
-                                <small>KES</small>
-                                <strong>---</strong>
-                            </div>
-
-                        </div>
-
-                        <button class="quick-add">
-                            + Add to Cart
-                        </button>
-
-                    </div>
-
-                    <div class="floating-note">
-                        <span>🌭</span>
-                        <div>
-                            <strong>The Ndakava</strong>
-                            <small>Our signature bite</small>
-                        </div>
-                    </div>
-
-                </div>
-
+            <div class="hero-buttons">
+              <a href="#menu" class="btn btn-primary">Order Now</a>
+              <a href="#menu" class="btn btn-secondary">View Menu</a>
             </div>
 
-        </section>
+            <div class="hero-stats">
+              <div class="stat">
+                <strong>01</strong>
+                <span>FBI Bite<br />Ndakava Dog</span>
+              </div>
+              <div class="stat">
+                <strong>24/7</strong>
+                <span>Fast order<br />energy</span>
+              </div>
+              <div class="stat">
+                <strong>FBI</strong>
+                <span>Built for<br />cravings</span>
+              </div>
+            </div>
+          </div>
 
+          <div class="hero-food" aria-label="Featured food item">
+            <div class="hero-circle"></div>
 
-        <!-- =========================
-             CATEGORY STRIP
-        ========================== -->
+            <div class="food-card-main">
+              <span class="food-badge">FBI BITES FAVOURITE</span>
 
-        <section class="categories">
+              <div class="food-image">
+                <img src="images/Ndakava dog.jpg" alt="Ndakava dog" />
+              </div>
 
-            <div class="section-container">
-
-                <div class="section-heading small-heading">
-
-                    <span>WHAT ARE YOU CRAVING?</span>
-
-                    <h2>
-                        Pick Your <em>Weapon.</em>
-                    </h2>
-
+              <div class="food-card-info">
+                <div>
+                  <span>FBI BITES</span>
+                  <h2>Ndakava Dog</h2>
                 </div>
-
-
-                <div class="category-grid">
-
-                    <a href="#menu" class="category-card active">
-
-                        <div class="category-icon">
-                            🌭
-                        </div>
-
-                        <div>
-                            <h3>Ndakava Dogs</h3>
-                            <p>Our signature</p>
-                        </div>
-
-                        <span class="category-arrow">→</span>
-
-                    </a>
-
-
-                    <a href="#menu" class="category-card">
-
-                        <div class="category-icon">
-                            
-                        </div>
-
-                        <div>
-                            <h3>Fries</h3>
-                            <p>Crispy goodness</p>
-                        </div>
-
-                        <span class="category-arrow">→</span>
-
-                    </a>
-
-
-                    <a href="#menu" class="category-card">
-
-                        <div class="category-icon">
-                            🥚
-                        </div>
-
-                        <div>
-                            <h3>Snacks</h3>
-                            <p>Small but mighty</p>
-                        </div>
-
-                        <span class="category-arrow">→</span>
-
-                    </a>
-
-
-                    <a href="#menu" class="category-card">
-
-                        <div class="category-icon">
-                            🫓
-                        </div>
-
-                        <div>
-                            <h3>Meals</h3>
-                            <p>Proper hunger solutions</p>
-                        </div>
-
-                        <span class="category-arrow">→</span>
-
-                    </a>
-
+                <div class="food-price">
+                  <small>KES</small>
+                  <strong>150</strong>
                 </div>
+              </div>
 
+              <button class="quick-add" type="button">+ Add to Cart</button>
             </div>
 
-        </section>
-
-
-        <!-- =========================
-             MENU SECTION
-        ========================== -->
-
-        <section class="menu-section" id="menu">
-
-            <div class="section-container">
-
-                <div class="menu-header">
-
-                    <div class="section-heading">
-
-                        <span>THE FBI MENU</span>
-
-                        <h2>
-                            Good Food.<br>
-                            <em>No Interrogation.</em>
-                        </h2>
-
-                    </div>
-
-                    <p>
-                        From our signature Ndakava Dog to crispy fries,
-                        we've got something for every kind of craving.
-                    </p>
-
-                </div>
-
-
-                <div class="menu-grid">
-
-                    <!-- PRODUCT 1 -->
-
-                    <article class="product-card featured-product">
-
-                        <div class="product-image">
-
-                            <span class="product-label">
-                                SIGNATURE
-                            </span>
-
-                            <img
-                                src="images/Ndakava dog.jpg"
-                                alt="Ndakava Dog"
-                            >
-
-                            <button class="favorite">
-                                ♡
-                            </button>
-
-                        </div>
-
-                        <div class="product-info">
-
-                            <div class="product-category">
-                                NDAKAVA DOGS
-                            </div>
-
-                            <h3>Ndakava Dog</h3>
-
-                            <p>
-                                The FBI signature. Big flavor,
-                                proper bite.
-                            </p>
-
-                            <div class="product-bottom">
-
-                                <strong class="price">
-                                    KES ---
-                                </strong>
-
-                                <button class="add-button">
-                                    +
-                                </button>
-
-                            </div>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- PRODUCT 2 -->
-
-                    <article class="product-card">
-
-                        <div class="product-image">
-
-                            <img
-                                src="images/Fries.jpg"
-                                alt="FBI Fries"
-                            >
-
-                            <button class="favorite">
-                                ♡
-                            </button>
-
-                        </div>
-
-                        <div class="product-info">
-
-                            <div class="product-category">
-                                FRIES
-                            </div>
-
-                            <h3>FBI Fries</h3>
-
-                            <p>
-                                Crispy, golden and ready
-                                for serious cravings.
-                            </p>
-
-                            <div class="product-bottom">
-
-                                <strong class="price">
-                                    KES ---
-                                </strong>
-
-                                <button class="add-button">
-                                    +
-                                </button>
-
-                            </div>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- PRODUCT 3 -->
-
-                    <article class="product-card">
-
-                        <div class="product-image">
-
-                            <img
-                                src="images/Eggballs.jpg"
-                                alt="Eggballs"
-                            >
-
-                            <button class="favorite">
-                                ♡
-                            </button>
-
-                        </div>
-
-                        <div class="product-info">
-
-                            <div class="product-category">
-                                SNACKS
-                            </div>
-
-                            <h3>Eggballs</h3>
-
-                            <p>
-                                A simple snack that somehow
-                                disappears extremely quickly.
-                            </p>
-
-                            <div class="product-bottom">
-
-                                <strong class="price">
-                                    KES ---
-                                </strong>
-
-                                <button class="add-button">
-                                    +
-                                </button>
-
-                            </div>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- PRODUCT 4 -->
-
-                    <article class="product-card">
-
-                        <div class="product-image">
-
-                            <img
-                                src="images/Smocha.jpg"
-                                alt="Smocha"
-                            >
-
-                            <button class="favorite">
-                                ♡
-                            </button>
-
-                        </div>
-
-                        <div class="product-info">
-
-                            <div class="product-category">
-                                QUICK BITES
-                            </div>
-
-                            <h3>Smocha</h3>
-
-                            <p>
-                                A Kenyan classic for when
-                                hunger has started making demands.
-                            </p>
-
-                            <div class="product-bottom">
-
-                                <strong class="price">
-                                    KES ---
-                                </strong>
-
-                                <button class="add-button">
-                                    +
-                                </button>
-
-                            </div>
-
-                        </div>
-
-                    </article>
-
-                </div>
-
-
-                <div class="menu-button-wrapper">
-
-                    <a href="#" class="btn btn-dark">
-                        View Full Menu
-                        <span>→</span>
-                    </a>
-
-                </div>
-
+            <div class="floating-note">
+              <span>🌭</span>
+              <div>
+                <strong>The Ndakava</strong>
+                <small>Made for your craving</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="categories">
+        <div class="section-container">
+          <div class="section-heading small-heading">
+            <span>WHAT ARE YOU CRAVING?</span>
+            <h2>Pick your <em>fix.</em></h2>
+          </div>
+          <div class="category-grid" id="categoryTiles" aria-label="Product categories"></div>
+        </div>
+      </section>
+
+      <section class="featured-section" id="featured">
+        <div class="section-container">
+          <div class="section-heading">
+            <span>FBI FAVOURITES</span>
+            <h2>Food to get you <em>started.</em></h2>
+          </div>
+          <div class="menu-grid featured-grid" id="featuredGrid"></div>
+        </div>
+      </section>
+
+      <section class="order-cta">
+        <div class="cta-content">
+          <span>HUNGRY ALREADY?</span>
+          <h2>Don’t think.<br /><em>Just bite.</em></h2>
+          <a href="#menu" class="btn btn-yellow" data-page-link="menu">Start Your Order →</a>
+        </div>
+      </section>
+      </div>
+
+      <div class="page-view" data-page="menu" id="menuPage" hidden>
+      <section class="menu-section" id="menu">
+        <div class="section-container">
+          <div class="menu-header">
+            <div class="section-heading">
+              <span>THE FBI MENU</span>
+              <h2>Good food.<br /><em>No interrogation.</em></h2>
+            </div>
+            <p>
+              Built for quick bites, fast cravings and everyday convenience — with enough flavor to keep people coming back.
+            </p>
+          </div>
+
+          <label class="menu-search">
+            <span>Search the menu</span>
+            <input id="menuSearch" type="search" placeholder="Search FBI Bites..." autocomplete="off" />
+          </label>
+
+          <div class="menu-filter-bar" id="menuFilters" aria-label="Menu filters"></div>
+
+          <div class="menu-grid" id="menuGrid"></div>
+          <p class="menu-no-results" id="menuNoResults" hidden>No bites match your search. Try another name or category.</p>
+        </div>
+      </section>
+      </div>
+
+      <div class="page-view" data-page="about" id="aboutPage" hidden>
+      <section class="about-section" id="about">
+        <div class="section-container about-container">
+          <div class="about-content">
+            <span class="eyebrow">WHY FBI BITES?</span>
+            <h2>Food that fits <span>real life.</span></h2>
+            <p>
+              FBI Bites was built around one idea: food should be exciting, affordable and easy to order when the craving hits.
+            </p>
+            <p>
+              We are starting with the basics that matter most — taste, speed, convenience and consistency — while building toward a bigger branch network and a recognizable Kenyan food brand.
+            </p>
+            <a href="#contact" class="text-link">Get to know FBI →</a>
+          </div>
+
+          <div class="about-card">
+            <div class="about-card-top">
+              <span>FBI</span>
+              <span>BITES</span>
             </div>
 
-        </section>
-
-
-        <!-- =========================
-             NDAKAVA FEATURE
-        ========================== -->
-
-        <section class="signature-section">
-
-            <div class="signature-container">
-
-                <div class="signature-image">
-
-                    <div class="signature-pattern"></div>
-
-                    <img
-                        src="images/Ndakava dog.jpg"
-                        alt="The FBI Ndakava Dog"
-                    >
-
-                </div>
-
-
-                <div class="signature-content">
-
-                    <span class="eyebrow">
-                        THIS ISN'T JUST A HOT DOG
-                    </span>
-
-                    <h2>
-                        Meet the<br>
-                        <span>Ndakava Dog.</span>
-                    </h2>
-
-                    <p>
-                        The signature FBI Bites creation.
-                        Built to be memorable, satisfying and
-                        unmistakably ours.
-                    </p>
-
-                    <div class="signature-points">
-
-                        <div>
-                            <strong>01</strong>
-                            <span>Signature FBI recipe</span>
-                        </div>
-
-                        <div>
-                            <strong>02</strong>
-                            <span>Made for serious cravings</span>
-                        </div>
-
-                        <div>
-                            <strong>03</strong>
-                            <span>One day, everywhere</span>
-                        </div>
-
-                    </div>
-
-                    <a href="#menu" class="text-link">
-                        Try the Ndakava →
-                    </a>
-
-                </div>
-
+            <div class="about-card-middle">
+              <strong>FREEZE</strong>
+              <strong>YOUR</strong>
+              <strong>CRAVINGS</strong>
             </div>
 
-        </section>
+            <div class="about-card-bottom">Since Day One.</div>
+          </div>
+        </div>
+      </section>
+      </div>
 
+      <div class="page-view" data-page="how-it-works" id="howItWorksPage" hidden>
+      <section class="how-it-works" id="how-it-works">
+        <div class="section-container">
+          <div class="section-heading center-heading">
+            <span>HOW IT WORKS</span>
+            <h2>Simple. Fast. <em>Delicious.</em></h2>
+          </div>
 
-        <!-- =========================
-             ABOUT
-        ========================== -->
-
-        <section class="about-section" id="about">
-
-            <div class="section-container about-container">
-
-                <div class="about-content">
-
-                    <span class="eyebrow">
-                        WHY FBI BITES?
-                    </span>
-
-                    <h2>
-                        We Don't Just<br>
-                        <span>Sell Food.</span>
-                    </h2>
-
-                    <p>
-                        FBI Bites is being built around one simple idea:
-                        food should be exciting, accessible and worth
-                        coming back for.
-                    </p>
-
-                    <p>
-                        Starting small doesn't mean thinking small.
-                        Every order, every recipe and every customer
-                        is part of building something bigger.
-                    </p>
-
-                    <a href="#contact" class="text-link">
-                        Get to know FBI →
-                    </a>
-
-                </div>
-
-
-                <div class="about-card">
-
-                    <div class="about-card-top">
-                        <span>FBI</span>
-                        <span>BITES</span>
-                    </div>
-
-                    <div class="about-card-middle">
-
-                        <strong>
-                            FREEZE
-                        </strong>
-
-                        <strong>
-                            YOUR
-                        </strong>
-
-                        <strong>
-                            CRAVINGS
-                        </strong>
-
-                    </div>
-
-                    <div class="about-card-bottom">
-                        Since Day One.
-                    </div>
-
-                </div>
-
+          <div class="steps-grid">
+            <div class="step-card">
+              <span class="step-number">01</span>
+              <h3>Pick your food</h3>
+              <p>Browse our menu and choose the quick bites you want.</p>
             </div>
 
-        </section>
-
-
-        <!-- =========================
-             ORDER CTA
-        ========================== -->
-
-        <section class="order-cta">
-
-            <div class="cta-content">
-
-                <span>
-                    HUNGRY ALREADY?
-                </span>
-
-                <h2>
-                    Don't Think.<br>
-                    <em>Just Bite.</em>
-                </h2>
-
-                <a href="#menu" class="btn btn-yellow">
-                    Start Your Order →
-                </a>
-
+            <div class="step-card">
+              <span class="step-number">02</span>
+              <h3>Add to cart</h3>
+              <p>Update quantities and build your order in seconds.</p>
             </div>
 
-        </section>
+            <div class="step-card">
+              <span class="step-number">03</span>
+              <h3>Checkout</h3>
+              <p>Send your order through WhatsApp or pay via M-Pesa.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      </div>
 
+      <div class="page-view" data-page="contact" id="contactPage" hidden>
+      <section class="contact-section" id="contact">
+        <div class="section-container">
+          <div class="contact-grid">
+            <div>
+              <span class="eyebrow">FBI BITES</span>
+              <h2>Let’s talk <span>food.</span></h2>
+            </div>
 
-        <!-- =========================
-             CONTACT
-        ========================== -->
-
-        <section class="contact-section" id="contact">
-
-            <div class="section-container">
-
-                <div class="contact-grid">
-
-                    <div>
-
-                        <span class="eyebrow">
-                            FBI BITES
-                        </span>
-
-                        <h2>
-                            Let's Talk<br>
-                            <span>Food.</span>
-                        </h2>
-
-                    </div>
-
-                    <div class="contact-details">
-
-                        <div>
-                            <span>ORDERS</span>
-                            <strong>WhatsApp / Phone</strong>
-                        </div>
-
-                        <div>
-                            <span>LOCATION</span>
-                            <strong>Nairobi Utawala and Beyond</strong>
-                        </div>
-
-                        <div>
-                            <span>HOURS</span>
-                            <strong>8:00 AM — Late</strong>
-                        </div>
-
-                    </div>
-
+            <div class="contact-details">
+              <div>
+                <span>PHONE</span>
+                <a class="contact-link" href="tel:+254790569032">0790 569 032</a>
+              </div>
+              <div>
+                <span>WHATSAPP</span>
+                <a class="contact-link" href="https://wa.me/254790569032" target="_blank" rel="noopener noreferrer">Chat with FBI Bites</a>
+              </div>
+              <div>
+                <span>EMAIL</span>
+                <a class="contact-link" href="mailto:fbibites@gmail.com">fbibites@gmail.com</a>
+              </div>
+              <div>
+                <span>SOCIAL</span>
+                <div class="contact-social">
+                  <a href="https://www.tiktok.com/@fbibites" target="_blank" rel="noopener noreferrer">TikTok · FBI Bites</a>
+                  <a href="https://www.instagram.com/fbibites/" target="_blank" rel="noopener noreferrer">Instagram · @fbibites</a>
                 </div>
-
+              </div>
+              <div>
+                <span>LOCATION</span>
+                <strong>Nairobi, Utawala and surrounding areas</strong>
+              </div>
+              <div>
+                <span>HOURS</span>
+                <strong>8:00 AM — Late</strong>
+              </div>
             </div>
-
-        </section>
-
+          </div>
+        </div>
+      </section>
+      </div>
     </main>
 
-
-    <!-- =========================
-         FOOTER
-    ========================== -->
-
     <footer class="footer">
-
-        <div class="section-container footer-container">
-
-            <div class="footer-brand">
-
-                <img
-                    src="images/Fbi logo.jpg"
-                    alt="FBI Bites"
-                >
-
-                <p>
-                    Freeze Your Cravings.
-                </p>
-
-            </div>
-
-            <div class="footer-links">
-
-                <a href="#home">Home</a>
-                <a href="#menu">Menu</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
-
-            </div>
-
-            <div class="footer-copy">
-
-                <p>
-                    © 2026 FBI Bites. All rights reserved.
-                </p>
-
-            </div>
-
+      <div class="section-container footer-container">
+        <div class="footer-brand">
+          <img src="images/Fbi logo.jpg" alt="FBI Bites logo" />
+          <p>Freeze Your Cravings.</p>
         </div>
 
+        <div class="footer-links">
+          <a href="#home" data-page-link="home">Home</a>
+          <a href="#menu" data-page-link="menu">Menu</a>
+          <a href="#about" data-page-link="about">About</a>
+          <a href="#how-it-works" data-page-link="how-it-works">How It Works</a>
+          <a href="#contact" data-page-link="contact">Contact</a>
+        </div>
+
+        <div class="footer-social" aria-label="Contact and social links">
+          <a href="https://wa.me/254790569032" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+          <a href="mailto:fbibites@gmail.com">Email</a>
+          <a href="https://www.tiktok.com/@fbibites" target="_blank" rel="noopener noreferrer">TikTok</a>
+          <a href="https://www.instagram.com/fbibites/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </div>
+
+        <div class="footer-copy">
+          <p>© 2026 FBI Bites. All rights reserved.</p>
+        </div>
+      </div>
     </footer>
 
+    <div class="cart-overlay" id="cartOverlay"></div>
 
-</body>
+    <aside class="cart-panel" id="cartPanel" aria-label="Shopping cart">
+      <div class="cart-header">
+        <div>
+          <span class="eyebrow">YOUR ORDER</span>
+          <h3>Cart</h3>
+        </div>
+        <button class="cart-close" id="cartClose" type="button" aria-label="Close cart">×</button>
+      </div>
+
+      <div class="cart-body">
+        <div class="cart-empty" id="cartEmptyState">
+          <p>Your cart is empty.</p>
+          <small>Add a few FBI bites to get started.</small>
+        </div>
+
+        <div class="cart-items" id="cartItems"></div>
+
+        <div class="checkout-form">
+          <label>
+            Your name
+            <input type="text" id="customerName" placeholder="e.g. Alex" />
+          </label>
+
+          <label>
+            M-Pesa phone number
+            <input type="tel" id="customerPhone" inputmode="tel" autocomplete="tel" placeholder="07XX XXX XXX" />
+          </label>
+
+          <label>
+            Delivery location
+            <input type="text" id="customerLocation" placeholder="e.g. Utawala, Nairobi" />
+          </label>
+
+          <label>
+            Notes
+            <textarea id="customerNote" placeholder="Extra sauce, no onions, etc."></textarea>
+          </label>
+        </div>
+      </div>
+
+      <div class="cart-footer">
+        <div class="cart-line"><span>Subtotal</span><strong id="cartSubtotal">KES 0</strong></div>
+        <div class="cart-line"><span>Delivery</span><strong id="cartDelivery">KES 0</strong></div>
+        <div class="cart-total-row">
+          <span>Total</span>
+          <strong id="cartTotal">KES 0</strong>
+        </div>
+        <p class="cart-estimate-note" id="cartEstimateNote" hidden>Some item prices are estimates. Please confirm the final amount before payment.</p>
+
+        <button class="checkout-button" id="checkoutButton" type="button">Place Order</button>
+
+        <div class="payment-actions">
+          <button class="cta-btn whatsapp-btn" id="whatsappCheckout" type="button">Order on WhatsApp</button>
+          <button class="cta-btn mpesa-btn" id="mpesaCheckout" type="button">Pay with M-Pesa</button>
+        </div>
+
+        <p class="mpesa-note">Manual M-Pesa: <strong>0790569032</strong>. STK prompts require a registered PayBill or Till.</p>
+        <p class="mpesa-note" id="mpesaStatus" role="status" aria-live="polite"></p>
+      </div>
+    </aside>
+
+    <script src="products.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
